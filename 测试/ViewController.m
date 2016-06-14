@@ -12,8 +12,10 @@
 
 @interface ViewController ()<UINavigationControllerDelegate>
 
+#pragma mark - 手势1.设置一个手势转场类
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactivePopTransition;
 
+#pragma mark - 转场1.写一个动画
 @property (nonatomic, strong)PushAnimation *pushAnimation;
 
 @end
@@ -25,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    #pragma mark - 手势2.添加一个手势
     UIScreenEdgePanGestureRecognizer *popRecognizer = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePopRecognizer:)];
     popRecognizer.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:popRecognizer];
@@ -43,6 +46,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    #pragma mark - 转场2.设置一个代理
     // Set outself as the navigation controller's delegate so we're asked for a transitioning object
     self.navigationController.delegate = self;
     
@@ -59,6 +63,7 @@
 }
 #pragma mark UINavigationControllerDelegate methods
 
+#pragma mark - 转场3.实现代理方法
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController *)fromVC
@@ -70,7 +75,7 @@
     }
 }
 
-
+#pragma mark - 手势3.实现手势代理
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
                          interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController {
     // Check if this is for our custom transition
@@ -84,7 +89,7 @@
 
 
 #pragma mark UIGestureRecognizer handlers
-
+#pragma mark - 手势4.实现手势
 - (void)handlePopRecognizer:(UIScreenEdgePanGestureRecognizer*)recognizer {
     
     
