@@ -13,6 +13,8 @@
 		7C42679B1D0F9E8100DC5D92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4267991D0F9E8100DC5D92 /* Main.storyboard */; };
 		7C42679D1D0F9E8100DC5D92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C42679C1D0F9E8100DC5D92 /* Assets.xcassets */; };
 		7C4267A01D0F9E8100DC5D92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C42679E1D0F9E8100DC5D92 /* LaunchScreen.storyboard */; };
+		7C4267A91D0F9F4C00DC5D92 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4267A81D0F9F4C00DC5D92 /* SecondViewController.m */; };
+		7C4267AE1D0FA1F200DC5D92 /* PushAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C4267AD1D0FA1F200DC5D92 /* PushAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		7C42679C1D0F9E8100DC5D92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C42679F1D0F9E8100DC5D92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C4267A11D0F9E8100DC5D92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C4267A71D0F9F4C00DC5D92 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7C4267A81D0F9F4C00DC5D92 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		7C4267AC1D0FA1F200DC5D92 /* PushAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushAnimation.h; sourceTree = "<group>"; };
+		7C4267AD1D0FA1F200DC5D92 /* PushAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 				7C4267941D0F9E8100DC5D92 /* AppDelegate.m */,
 				7C4267961D0F9E8100DC5D92 /* ViewController.h */,
 				7C4267971D0F9E8100DC5D92 /* ViewController.m */,
+				7C4267A71D0F9F4C00DC5D92 /* SecondViewController.h */,
+				7C4267A81D0F9F4C00DC5D92 /* SecondViewController.m */,
+				7C4267AC1D0FA1F200DC5D92 /* PushAnimation.h */,
+				7C4267AD1D0FA1F200DC5D92 /* PushAnimation.m */,
 				7C4267991D0F9E8100DC5D92 /* Main.storyboard */,
 				7C42679C1D0F9E8100DC5D92 /* Assets.xcassets */,
 				7C42679E1D0F9E8100DC5D92 /* LaunchScreen.storyboard */,
@@ -149,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C4267AE1D0FA1F200DC5D92 /* PushAnimation.m in Sources */,
+				7C4267A91D0F9F4C00DC5D92 /* SecondViewController.m in Sources */,
 				7C4267981D0F9E8100DC5D92 /* ViewController.m in Sources */,
 				7C4267951D0F9E8100DC5D92 /* AppDelegate.m in Sources */,
 				7C4267921D0F9E8100DC5D92 /* main.m in Sources */,
@@ -263,9 +275,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "测试/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chuye.--";
+				PRODUCT_BUNDLE_IDENTIFIER = www.cloud7.com.cn.Chuye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -274,9 +288,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "测试/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chuye.--";
+				PRODUCT_BUNDLE_IDENTIFIER = www.cloud7.com.cn.Chuye;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
